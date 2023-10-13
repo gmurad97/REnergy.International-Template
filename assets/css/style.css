@@ -1,53 +1,130 @@
+@import "../fonts/helvetica/stylesheet.css";
+@import "../fonts/montserrat/stylesheet.css";
+@import "../css/bootstrap-grid.min.css";
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
-    font-family: 'Pragmatica' !important;
+  font-family: "Montserrat";
 }
 
-.header-main {
-    background-image: url("https://imgproc.comap-control.com/Local/mediacontainer/comap/media/applications/comap_application_ac_dc.jpg?f=Avif&w=1920&h=1000&q=70&v=638063943292875708");
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+.header {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.header__nav {
+  position: absolute;
+  top: 0px;
+  z-index: 1024;
+  width: 100%;
+  height: auto;
+}
+.header__nav .container {
+  padding: 16px 0px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.32);
+}
+.header__logo {
+  width: 232px;
+}
+.header__logoa > img {
+  width: 100%;
+  height: auto;
+}
+.header__inf a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  color: #ffffff;
+  -webkit-transition: color 128ms linear;
+  transition: color 128ms linear;
+}
+.header__inf a:hover {
+  color: #ff0f00;
 }
 
-.header-main-content{
-    margin-top: 150px;
-    margin-bottom: 150px;
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  list-style-type: none;
+}
+.menu__item:not(:last-of-type) {
+  margin-right: 16px;
+}
+.menu__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  color: #ffffff;
+  -webkit-transition: color 128ms linear;
+  transition: color 128ms linear;
+}
+.menu__link:hover {
+  color: #ff0f00;
 }
 
-.navbar {
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5018382352941176) 64%, transparent 100%);
+.header-content {
+  width: 100%;
+  height: auto;
 }
-
-.nav-link {
-    font-size: 12px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #ffffff;
-    margin: 0px 16px;
+.header-content__item {
+  position: relative;
+  width: 100%;
+  height: 100vh;
 }
-
-.nav-link:hover {
-    color: #ff0000;
+.header-content__video {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-
-.navbar-phone {
-    font-size: 12px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #ffffff;
+.header-content__overlay {
+  position: absolute;
+  background-color: transparent;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
 }
-
-
-
-
-
-
-
-.kus {
-    border-bottom: 1px solid red;
+.header-content__overlay::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(0, 0, 0)), color-stop(64%, rgba(0, 0, 0, 0.5)), to(transparent));
+  background-image: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 64%, transparent 100%);
+  width: 100%;
+  height: 300px;
 }
-
-.navbar-collapse {
-    flex-grow: unset !important;
+.header-content__overlay::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgb(0, 0, 0)), color-stop(64%, rgba(0, 0, 0, 0.5)), to(transparent));
+  background-image: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 64%, transparent 100%);
+  width: 100%;
+  height: 300px;
 }
