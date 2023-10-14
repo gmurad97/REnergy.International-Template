@@ -12,60 +12,102 @@
 <body>
     <header class="header">
         <nav class="header__nav">
-            <div class="container d-flex flex-row justify-content-between align-items-center">
-                <div class="header__logo">
-                    <a href="#">
-                        <img src="assets/img/logo/logo_white.png" alt="Logo White">
-                    </a>
-                </div>
-                <div class="header__menu">
-                    <ul class="menu">
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">About us</a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">Trading</a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">Shipping</a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">Projects</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="header__inf">
-                    <a href="tel:+971-00-1234567">+971-00-1234567</a>
-                </div>
-            </div>
-        </nav>
-
-        <div class="header-content">
-            <div class="header-content__item">
-                <div class="header-content__overlay"></div>
-                <video class="header-content__video" src="assets/video/tanker.mov" autoplay loop muted></video>
-                <div class="header-content__content header-content__content--first">
-                    <div class="container">
-                        <h1 class="header-content__heading">
-                            Lorem<br>Slogan.
-                        </h1>
-                        <p class="header-content__text">
-                            <b>RR Shipping</b> Company In tempus purus est, eget suscipit
-                            nulla molestie id. Nam nec rutrum diam.
-                        </p>
+            <div class="container">
+                <div class="header__nav-content">
+                    <div class="header__logo">
+                        <a href="#">
+                            <img src="assets/img/logo/logo_white.png" alt="Logo White">
+                        </a>
+                    </div>
+                    <div class="header__menu">
+                        <ul class="header__menu-list">
+                            <li class="header__menu-item">
+                                <a class="header__menu-link" href="#">About us</a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a class="header__menu-link" href="#">Trading</a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a class="header__menu-link" href="#">Shipping</a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a class="header__menu-link" href="#">Projects</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header__phone">
+                        <a href="tel:+971-00-1234567" class="header__phone-link">+971-00-1234567</a>
                     </div>
                 </div>
             </div>
+        </nav>
+        <div class="header__content">
 
-            <div class="header-content__item">
-                <video class="header-content__video" src="assets/video/tanker.mov" autoplay loop muted></video>
-                <div class="header-content__content header-content__content--second">
-                    <h1 class="header-content__heading">Your Heading</h1>
-                    <p class="header-content__text">Your text here</p>
+
+
+            <div class="header__content-block">
+
+                <div class="header__content-overlay"></div>
+                <video class="header__content-element" src="assets/video/tanker.mov" autoplay loop muted
+                    style="object-position: 0% 100%;"></video>
+                <div class="header__content-text">
+                    <div class="container d-flex flex-row justify-content-between align-items-end">
+                        <div class="header__text-container">
+                            <div class="header__content-triangle"></div>
+                            <h1 class="header__content-title">
+                                Lorem<br>Slogan.
+                            </h1>
+                            <p class="header__content-description">
+                                <b>RR Shipping Company</b> In tempus purus est, eget suscipit nulla molestie id. Nam nec
+                                rutrum diam.
+                            </p>
+                        </div>
+                        <button type="button" class="header__content-scroll-button" id="header-content-scroll-btn">
+                            Scroll Down
+                            <i class="fa-solid fa-chevron-down ms-1"></i>
+                        </button>
+                    </div>
                 </div>
+
+                
             </div>
+
+            <div class="header__content-block">
+                <div class="header__content-element"></div>
+                <div class="header__content-text--second">
+                    <div class="container">
+                        <div class="header__text-container">
+                            <div class="header__content-triangle"></div>
+                            <h1 class="header__content-title">
+                                Lorem<br>Slogan.
+                            </h1>
+                            <p class="header__content-description">
+                                <b>RR Shipping Company</b> In tempus purus est, eget suscipit nulla molestie id. Nam nec
+                                rutrum diam.
+                            </p>
+                            <p>
+
+                            </p>
+                            
+                        </div>
+                        <img width="500px" src="assets/img/header/tanker.jpg" alt="Tanker">
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+
+            
         </div>
+
+
+
+
     </header>
+
 
 
 
@@ -75,6 +117,7 @@
 
     <footer></footer>
 
+    <script src="assets/js/fa_icons.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 
