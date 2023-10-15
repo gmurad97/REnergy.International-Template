@@ -42,77 +42,111 @@
             </div>
         </nav>
         <div class="header__content">
-
-
-
             <div class="header__content-block">
-
                 <div class="header__content-overlay"></div>
-                <video class="header__content-element" src="assets/video/tanker.mov" autoplay loop muted
-                    style="object-position: 0% 100%;"></video>
-                <div class="header__content-text">
+                <div class="header__content-video header__content-video--main">
+                    <video autoplay loop muted>
+                        <source src="assets/video/tanker.mov" type="video/mp4">
+                    </video>
+                </div>
+                <div class="header__content-text header__content-text--main">
                     <div class="container d-flex flex-row justify-content-between align-items-end">
-                        <div class="header__text-container">
-                            <div class="header__content-triangle"></div>
-                            <h1 class="header__content-title">
-                                Lorem<br>Slogan.
-                            </h1>
-                            <p class="header__content-description">
+                        <div class="header__data-container header__data-container--main">
+                            <div class="header__content-triangle header__content-triangle--main"></div>
+                            <div class="header__content-title">
+                                <h1 class="header__content-title--main-h1">Lorem</h1>
+                                <p class="header__content-title--main-p">Slogan.</p>
+                            </div>
+                            <p class="header__content-description header__content-description--main">
                                 <b>RR Shipping Company</b> In tempus purus est, eget suscipit nulla molestie id. Nam nec
                                 rutrum diam.
                             </p>
                         </div>
-                        <button type="button" class="header__content-scroll-button" id="header-content-scroll-btn">
-                            Scroll Down
-                            <i class="fa-solid fa-chevron-down ms-1"></i>
-                        </button>
+                        <div class="header__content-scroll-button">
+                            <button type="button" id="header-content-scroll-btn">
+                                Scroll Down
+                                <i class="fa-solid fa-chevron-down ms-1"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
-
-                
             </div>
-
+            <div class="header__content-overlay--circle"></div>
             <div class="header__content-block">
-                <div class="header__content-element"></div>
-                <div class="header__content-text--second">
-                    <div class="container">
-                        <div class="header__text-container">
-                            <div class="header__content-triangle"></div>
-                            <h1 class="header__content-title">
-                                Lorem<br>Slogan.
-                            </h1>
-                            <p class="header__content-description">
-                                <b>RR Shipping Company</b> In tempus purus est, eget suscipit nulla molestie id. Nam nec
-                                rutrum diam.
+                <div class="header__content-gradient header__content-gradient--second"></div>
+                <div class="header__content-text header__content-text--second">
+                    <div class="container d-flex flex-row justify-content-between align-items-center">
+                        <div class="header__data-container header__data-container--second">
+                            <div class="header__content-triangle header__content-triangle--second"></div>
+                            <div class="header__content-title">
+                                <h1 class="header__content-title--second-h1">- About us</h1>
+                                <p class="header__content-title--second-p">We are a reliable logistics firm.</p>
+                            </div>
+                            <p class="header__content-description header__content-description--second">
+                                Duis aliquet ligula tortor, ut vestibulum quam rutrum vel.
+                                Pellentesque efficitur condimentum turpis vel pretium. Class aptent taciti sociosqu ad
+                                litora torquent per conubia nostra, per inceptos himenaeos. Nullam laoreet dolor
+                                accumsan molestie tincidunt. Aenean lobortis ligula in nunc fringilla tincidunt.
                             </p>
-                            <p>
-
+                            <p class="header__content-description header__content-description--second">
+                                <b>RR Shipping Company</b> ut nec sem ut libero porttitor bibendum. Sed sit amet congue
+                                dolor.
+                                Donec vehicula luctus leo, vel luctus justo dignissim et. Mauris suscipit hendrerit
+                                orci, at pretium nibh faucibus in. Curabitur quis tortor pulvinar, placerat mi sit amet,
+                                semper felis.
                             </p>
-                            
                         </div>
-                        <img width="500px" src="assets/img/header/tanker.jpg" alt="Tanker">
+                        <div class="header__content-img-second">
+                            <img src="assets/img/header/tanker.jpg" alt="Tanker">
+                        </div>
                     </div>
                 </div>
-
-
-
             </div>
-
-
-
-            
         </div>
-
-
-
-
     </header>
 
 
 
 
 
-    <main></main>
+    <main class="main">
+
+
+
+        <div class="container">
+
+
+
+            <section class="main__section">
+                <div class="main__heading">
+                    <h1 class="main__heading--category">- Industry Knowledge</h1>
+                    <p class="main__heading--title">Lorem ipsum</p>
+                </div>
+                <div class="main__image-container">
+                    <img class="main__image-container--img" src="assets/img/main/map.png" alt="Map">
+                </div>
+                <div class="main__services">
+                    <div class="main__services-image-container">
+                        <img class="main__services-image-container--img" src="" alt="">
+                    </div>
+                    <div class="main__services-heading">
+                        <h1 class="main__services-heading--title"></h1>
+                        <p class="main__services-heading--description"></p>
+                    </div>
+                </div>
+            </section>
+
+
+
+        </div>
+
+
+
+    </main>
+
+
+
+
 
 
     <footer></footer>
