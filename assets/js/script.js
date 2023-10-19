@@ -1,22 +1,36 @@
-/* JS HEADER MAIN SCROLL BUTTON - START */
-document.querySelector("#header-content-scroll-btn").addEventListener("click", function () {
-    window.scroll(0, window.innerHeight);
-});
-/* JS HEADER MAIN SCROLL BUTTON - ENDED */
+/* SCROLL 100VH BUTTON - START */
+const mainScrollBtn = document.querySelector("#description_block_main_scroll_btn");
 
-/* SERVICES ANIMATION - START */
-const serviceBlocks = document.querySelectorAll(".main__service-block");
-serviceBlocks.forEach((serviceBlock) => {
-    const circle = serviceBlock.querySelector(".main__service-block-circle");
+if (mainScrollBtn) {
+    mainScrollBtn.addEventListener("click", function () {
+        window.scroll(0, window.innerHeight);
+    });
+}
+/* SCROLL 100VH BUTTON - ENDED */
+
+/* SERVICES ANIME.JS - START */
+const serviceBlocks = document.querySelectorAll(".services__block");
+
+serviceBlocks.forEach(function (serviceBlock) {
+    const circleService = serviceBlock.querySelector(".services__icon-block--circle");
+
     serviceBlock.addEventListener("mouseenter", function () {
-        circle.style.transform = "scale(8)";
+        anime.remove(circleService);
+        anime({
+            targets: circleService,
+            scale: 7,
+            easing: "linear", // Используйте линейное замедление, чтобы избежать "прыгучести"
+            duration: 256
+        });
     });
 
     serviceBlock.addEventListener("mouseleave", function () {
-        circle.style.transform = "scale(0.7)";
-        setTimeout(function () {
-            circle.style.transform = "scale(1)";
-        }, 512);
+        anime.remove(circleService);
+        anime({
+            targets: circleService,
+            scale: 1,
+            easing: 'spring(1, 50, 9, 0)'
+        });
     });
 });
-/* SERVICES ANIMATION - ENDED */
+/* SERVICES ANIME.JS - ENDED */
