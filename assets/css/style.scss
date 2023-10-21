@@ -20,7 +20,9 @@ body {
     font-family: "Montserrat";
 }
 
-
+.container{
+    max-width: 1024;
+}
 
 .row {
     margin: 0px !important;
@@ -980,7 +982,7 @@ body {
         align-items: center;
     }
 
-    &__block--buton {
+    &__block--button {
         background-color: transparent;
         font-family: 'Helvetica Neue';
         font-size: 16px;

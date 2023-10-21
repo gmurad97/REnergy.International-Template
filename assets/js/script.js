@@ -99,12 +99,26 @@ $(document).ready(function () {
     /* FAQ BLOCKS FUNCTION - ENDED */
 });
 
-// Получаем все кнопки по их id
-const tradingButton = document.getElementById('trading');
-const shippingButton = document.getElementById('shipping');
-const seeAllButton = document.getElementById('see_all');
 
-// Получаем все блоки по их data-item
+
+
+const filtering_container = document.querySelector("#projects_block");
+//filtering-active
+if (filtering_container) {
+    const data_target = filtering_container.querySelectorAll("[data-target]");
+    const data_see_all = filtering_container.querySelector("#see_all");
+    const data_item = filtering_container.querySelectorAll('[data-item]');
+
+    data_target.forEach(function(btn){
+        //console.log(btn.getAttribute("data-target"));
+        btn.addEventListener("click",function(){
+            this.classList.toggle("filtering-active")
+        });
+    });
+}
+
+/* 
+
 const tradingContents = document.querySelectorAll('[data-item="trading"]');
 const shippingContents = document.querySelectorAll('[data-item="shipping"]');
 
@@ -137,3 +151,4 @@ seeAllButton.addEventListener('click', () => {
     content.style.display = 'block';
   });
 });
+ */

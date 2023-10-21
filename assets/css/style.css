@@ -1176,7 +1176,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-.filtering-control__block--buton {
+.filtering-control__block--button {
   background-color: transparent;
   font-family: "Helvetica Neue";
   font-size: 16px;
@@ -1187,12 +1187,12 @@ body {
   color: #000000;
   cursor: pointer;
 }
-.filtering-control__block--buton[class*=filtering-active] {
+.filtering-control__block--button[class*=filtering-active] {
   background: #ff0f00;
   border: 1px solid #ff0f00;
   color: #ffffff;
 }
-.filtering-control__block--buton:not(:last-of-type) {
+.filtering-control__block--button:not(:last-of-type) {
   margin-right: 4px;
 }
 
