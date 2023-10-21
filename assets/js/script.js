@@ -45,6 +45,7 @@ $(document).ready(function () {
     });
     /* FOOTER PARTNERS OWL CAROUSEL - ENDED */
 
+    /* FAQ BLOCKS FUNCTION - START */
     const faq_container = $(".faq");
     const faq_blocks = faq_container ? $(".faq__block") : null;
 
@@ -95,4 +96,44 @@ $(document).ready(function () {
             });
         });
     }
+    /* FAQ BLOCKS FUNCTION - ENDED */
+});
+
+// Получаем все кнопки по их id
+const tradingButton = document.getElementById('trading');
+const shippingButton = document.getElementById('shipping');
+const seeAllButton = document.getElementById('see_all');
+
+// Получаем все блоки по их data-item
+const tradingContents = document.querySelectorAll('[data-item="trading"]');
+const shippingContents = document.querySelectorAll('[data-item="shipping"]');
+
+// Обработчик для кнопки "Trading"
+tradingButton.addEventListener('click', () => {
+  tradingContents.forEach(content => {
+    content.style.display = 'block';
+  });
+  shippingContents.forEach(content => {
+    content.style.display = 'none';
+  });
+});
+
+// Обработчик для кнопки "Shipping"
+shippingButton.addEventListener('click', () => {
+  tradingContents.forEach(content => {
+    content.style.display = 'none';
+  });
+  shippingContents.forEach(content => {
+    content.style.display = 'block';
+  });
+});
+
+// Обработчик для кнопки "See All"
+seeAllButton.addEventListener('click', () => {
+  tradingContents.forEach(content => {
+    content.style.display = 'block';
+  });
+  shippingContents.forEach(content => {
+    content.style.display = 'block';
+  });
 });
