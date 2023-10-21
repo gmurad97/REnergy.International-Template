@@ -44,45 +44,55 @@ $(document).ready(function () {
         }
     });
     /* FOOTER PARTNERS OWL CAROUSEL - ENDED */
-});
 
+    const faq_container = $(".faq");
+    const faq_blocks = faq_container ? $(".faq__block") : null;
 
+    if (faq_container && faq_blocks) {
+        faq_blocks.each(function (index, faq_block) {
+            const faq_maximized_detail = $(faq_block).find(".faq__maximized-detail");
+            const faq_minimized_detail = $(faq_block).find(".faq__minimazed-detail");
 
+            $(faq_block).find(".faq__minimazed-detail-header--button").on("click", function () {
+                faq_minimized_detail.css({
+                    transform: "translate(0px, 50px)",
+                    opacity: 0
+                });
+                faq_maximized_detail.css({
+                    transform: "translate(0px, -50px)",
+                    opacity: 1,
+                    maxHeight: "384px"
+                });
 
-let miniblock = document.querySelector(".faq__minimazed-detail");
-let maxiblock = document.querySelector(".faq__maximized-detail");
+                faq_blocks.each(function (index, other_faq_block) {
+                    if (other_faq_block !== faq_block) {
+                        const other_faq_maximized_detail = $(other_faq_block).find(".faq__maximized-detail");
+                        const other_faq_minimized_detail = $(other_faq_block).find(".faq__minimazed-detail");
 
-function on(ret){
-    if(ret){
-        miniblock.style.transform = "translate(0px, 50px)";
-        miniblock.style.opacity = "0";
-    
-        maxiblock.style.transform = "translate(0px, -50px)";
-        maxiblock.style.opacity = "1";
-        maxiblock.style.maxHeight = "384px";
+                        other_faq_maximized_detail.css({
+                            transform: "translate(0px, 0px)",
+                            opacity: 0,
+                            maxHeight: "0px"
+                        });
+                        other_faq_minimized_detail.css({
+                            transform: "translate(0px, 0px)",
+                            opacity: 1
+                        });
+                    }
+                });
+            });
 
-
-
-
+            $(faq_block).find(".faq__maximized-detail-header--button").on("click", function () {
+                faq_minimized_detail.css({
+                    transform: "translate(0px, 0px)",
+                    opacity: 1
+                });
+                faq_maximized_detail.css({
+                    transform: "translate(0px, 0px)",
+                    opacity: 0,
+                    maxHeight: "0px"
+                });
+            });
+        });
     }
-    else{
-        miniblock.style.transform = "translate(0px, 0px)";
-        miniblock.style.opacity = "1";
-    
-    
-        maxiblock.style.transform = "translate(0px, 0px)";
-        maxiblock.style.opacity = "0";
-        maxiblock.style.maxHeight = "0px";
-    }
-}
-
-
-document.querySelector("#maximized_detail").addEventListener("click", function () {
-    on(true);
 });
-
-document.querySelector("#minimazed_detail").addEventListener("click", function () {
-    on(false);
-
-});
-
