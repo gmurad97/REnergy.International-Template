@@ -1532,6 +1532,14 @@ body {
         width: 100%;
     }
 
+    .footer__contact-block:not(:last-of-type){
+        margin: 0px;
+    }
+
+    .footer__contact-block{
+        padding: 0px;
+    }
+
     .footer__contact {
         flex-direction: column;
         justify-content: flex-start;
@@ -1583,4 +1591,15 @@ body {
     .section__heading{
         margin-bottom: 64px;
     }
+    .footer__contact-block{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 32px !important;
+    }
+
+    .footer__contact-block-info{
+        margin: 0;
+    }
+    
 }
