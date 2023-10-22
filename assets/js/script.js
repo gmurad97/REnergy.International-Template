@@ -39,7 +39,22 @@ $(document).ready(function () {
                 loop: true,
                 center: false,
                 nav: false,
-                dots: false
+                dots: false,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                    },
+                    600: {
+                        items: 3,
+                    },
+                    768: {
+                        items: 5,
+                    },
+                    1200: {
+                        items: 8,
+                    }
+                }
             });
         }
     });
@@ -109,9 +124,9 @@ if (filtering_container) {
     const data_see_all = filtering_container.querySelector("#see_all");
     const data_item = filtering_container.querySelectorAll('[data-item]');
 
-    data_target.forEach(function(btn){
+    data_target.forEach(function (btn) {
         //console.log(btn.getAttribute("data-target"));
-        btn.addEventListener("click",function(){
+        btn.addEventListener("click", function () {
             this.classList.toggle("filtering-active")
         });
     });
