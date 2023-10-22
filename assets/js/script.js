@@ -14,7 +14,7 @@ $(document).ready(function () {
             anime.remove(circleService[0]);
             anime({
                 targets: circleService[0],
-                scale: 8,
+                scale: 9,
                 easing: "linear",
                 duration: 256
             });
