@@ -649,6 +649,7 @@ body {
 
         &--category {
             text-transform: uppercase;
+            text-align: center;
             font-size: 16px;
             font-weight: 600;
             color: #ff0f00;
@@ -657,6 +658,7 @@ body {
 
         &--title {
             font-family: "Helvetica Neue";
+            text-align: center;
             text-transform: uppercase;
             font-size: 36px;
             color: #000000;
@@ -1534,8 +1536,11 @@ body {
 }
 
 @media screen and (max-width: 992px) {
+    .section__heading--category{
+        font-size: 18px;
+    }
     .description-block-main__overlay--triangle {
-        left: -160px;
+        display: none;
     }
 
     .navbar__content {
@@ -1600,7 +1605,16 @@ body {
     }
 
     .section__heading--title {
-        font-size: 14px !important;
+        font-size: 32px !important;
+    }
+    .section__heading--category{
+        font-size: 16px !important;
+    }
+    .description-block-main__heading--title{
+        font-size: 50px;
+    }
+    .description-block-secondary__heading--title:nth-of-type(2){
+        font-size: 50px;
     }
 
 }
@@ -1635,7 +1649,9 @@ body {
 
 @media screen and (max-width: 576px) {
     .navbar__list {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
+        //flex-flow: row wrap
     }
 
     .navbar__item:not(:last-of-type) {
