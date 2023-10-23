@@ -112,29 +112,87 @@ $(document).ready(function () {
         });
     }
     /* FAQ BLOCKS FUNCTION - ENDED */
+
+    /* JVECTOR MAP PLUGIN ABOUT US - START */
+    if ($("#world_map").length > 0) {
+        const countrySelectedColors = {
+            AZ: "rgb(255, 15, 0)",
+            RU: "rgb(46, 134, 222)",
+            AE: "rgb(16, 172, 132)",
+            QA: "rgb(243, 104, 224)",
+            TR: "rgb(255, 159, 67)",
+            GB: "rgb(27, 20, 100)",
+            defaultFill: "rgb(61, 61, 61)"
+        };
+
+
+        $("#world_map").vectorMap({
+            map: "world_mill_en",
+            zoomButtons: true,
+            zoomOnScroll: true,
+            panOnDrag: true,
+            backgroundColor: "transparent",
+            regionStyle: {
+                initial: {
+                    fill: "rgb(61, 61, 61)"
+                },
+                hover: {
+                    "fill-opacity": 0.7,
+                }
+            },
+            series: {
+                regions: [
+                    {
+                        attribute: "fill",
+                        values: countrySelectedColors
+                    }
+                ]
+            }
+        });
+    }
+    /* JVECTOR MAP PLUGIN ABOUT US - ENDED */
+
+    /* FILTERING PROJECTS - START */
+    const $filteringContainer = $("#projects_block");
+    const $dataTarget = $filteringContainer.find("[data-target]");
+    const $dataItem = $filteringContainer.find('[data-item]');
+    const $seeAllButton = $("#see_all");
+
+    if ($dataTarget.length > 0) {
+        $dataTarget.on("click", function () {
+            $dataItem.hide();
+            $dataTarget.removeClass("filtering-active");
+            const targetValue = $(this).data("target");
+            const $matchingItems = $filteringContainer.find(`[data-item="${targetValue}"]`);
+            $matchingItems.show();
+            $(this).addClass("filtering-active");
+        });
+    }
+
+    if ($seeAllButton.length > 0) {
+        $seeAllButton.on("click", function () {
+            $dataItem.show();
+            $dataTarget.removeClass("filtering-active");
+        });
+    }
+    /* FILTERING PROJECTS - ENDED */
 });
 
 
 
 
-const filtering_container = document.querySelector("#projects_block");
+
+
+
+
+
+
+
+
+
+
 //filtering-active
-if (filtering_container) {
-    const data_target = filtering_container.querySelectorAll("[data-target]");
-    const data_see_all = filtering_container.querySelector("#see_all");
-    const data_item = filtering_container.querySelectorAll('[data-item]');
-
-    data_target.forEach(function (btn) {
-        //console.log(btn.getAttribute("data-target"));
-        btn.addEventListener("click", function () {
-            this.classList.toggle("filtering-active")
-        });
-    });
-}
-
-/* 
-
-const tradingContents = document.querySelectorAll('[data-item="trading"]');
+/* const tradingContents = document.querySelectorAll('[data-item="trading"]');
 const shippingContents = document.querySelectorAll('[data-item="shipping"]');
 
 // Обработчик для кнопки "Trading"
@@ -166,4 +224,4 @@ seeAllButton.addEventListener('click', () => {
     content.style.display = 'block';
   });
 });
- */
+  */

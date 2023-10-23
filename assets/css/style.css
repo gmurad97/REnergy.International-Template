@@ -3,6 +3,7 @@
 @import "../css/bootstrap-grid.min.css";
 @import "../css/owl.carousel.min.css";
 @import "../css/owl.theme.default.min.css";
+@import "../plugins/jvectormap/css/jquery-jvectormap.min.css";
 *,
 *::before,
 *::after {
@@ -67,6 +68,49 @@ body {
 #owl-carousel-partners .owl-stage .owl-item img {
   width: 100%;
   height: 100%;
+}
+
+#world_map {
+  width: 100%;
+  height: 512px;
+}
+
+.jvectormap-zoomout {
+  top: 40px;
+}
+
+.jvectormap-zoomin,
+.jvectormap-zoomout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: transparent;
+  border: 1px solid #000000;
+  border-radius: 50%;
+  font-size: 32px;
+  font-weight: 500;
+  color: #000000;
+  padding: 8px;
+  cursor: pointer;
+  margin: 12px;
+  -webkit-transition: background-color 128ms linear, color 128ms linear;
+  transition: background-color 128ms linear, color 128ms linear;
+}
+
+.jvectormap-zoomin:hover,
+.jvectormap-zoomout:hover {
+  background-color: #ff0f00;
+  color: #ffffff;
 }
 
 .header {
@@ -264,12 +308,14 @@ body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.22);
 }
 .navbar__logo {
-  width: 166px;
+  width: 111px;
   height: auto;
 }
-.navbar__logoa > img {
+.navbar__logo > a > img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .navbar__list {
   display: -webkit-box;
@@ -510,8 +556,8 @@ body {
   margin-bottom: 32px;
 }
 .description-block-secondary__img {
-  width: 100%;
-  height: 444px;
+  max-width: 450px;
+  height: 500px;
 }
 .description-block-secondary__img img {
   width: 100%;
@@ -726,16 +772,6 @@ body {
   font-size: 36px;
   color: #000000;
 }
-.section__image {
-  width: 777px;
-  height: 100%;
-}
-.section__image--img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
 
 .services {
   width: 100%;
@@ -796,8 +832,8 @@ body {
 }
 .services__icon-block--img {
   position: absolute;
-  width: 32px;
-  height: 32px;
+  width: 50px;
+  height: 50px;
 }
 .services__heading-block {
   display: -webkit-box;
@@ -1647,6 +1683,7 @@ body {
   margin-bottom: 4px;
 }
 .footer__contact-block-info--description {
+  max-width: 300px;
   font-size: 14px;
   color: #ffffff;
 }
@@ -1664,6 +1701,7 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  padding: 20px;
 }
 .footer__nav-about {
   width: 100%;
