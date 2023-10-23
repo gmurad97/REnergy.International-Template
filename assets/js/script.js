@@ -40,6 +40,10 @@ $(document).ready(function () {
                 center: false,
                 nav: false,
                 dots: false,
+                autoplay: true,
+                autoplayTimeout: 2048,
+                smartSpeed: 512,
+                autoplayHoverPause: true,
                 responsiveClass: true,
                 responsive: {
                     0: {
@@ -177,51 +181,3 @@ $(document).ready(function () {
     }
     /* FILTERING PROJECTS - ENDED */
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//filtering-active
-/* const tradingContents = document.querySelectorAll('[data-item="trading"]');
-const shippingContents = document.querySelectorAll('[data-item="shipping"]');
-
-// Обработчик для кнопки "Trading"
-tradingButton.addEventListener('click', () => {
-  tradingContents.forEach(content => {
-    content.style.display = 'block';
-  });
-  shippingContents.forEach(content => {
-    content.style.display = 'none';
-  });
-});
-
-// Обработчик для кнопки "Shipping"
-shippingButton.addEventListener('click', () => {
-  tradingContents.forEach(content => {
-    content.style.display = 'none';
-  });
-  shippingContents.forEach(content => {
-    content.style.display = 'block';
-  });
-});
-
-// Обработчик для кнопки "See All"
-seeAllButton.addEventListener('click', () => {
-  tradingContents.forEach(content => {
-    content.style.display = 'block';
-  });
-  shippingContents.forEach(content => {
-    content.style.display = 'block';
-  });
-});
-  */

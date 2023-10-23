@@ -264,7 +264,7 @@ body {
     }
 
     &__logo {
-        width: 111px;
+        width: 150px;
         height: auto;
 
         &>a>img {
@@ -1341,6 +1341,7 @@ body {
     &__contact {
         display: flex;
         flex-direction: row;
+        flex-flow: wrap;
         justify-content: flex-start;
         align-items: center;
         border-bottom: 1px solid #959595;
