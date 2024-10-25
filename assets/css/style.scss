@@ -1484,6 +1484,10 @@ body {
             color: #ffffff;
             transition: color 128ms linear;
 
+            &-active{
+                color: #ff0f00;
+            }
+
             &:hover {
                 color: #ff0f00;
             }
@@ -1495,7 +1499,6 @@ body {
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-start;
-
     }
 
     &__nav-social-icon {
